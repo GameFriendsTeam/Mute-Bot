@@ -9,9 +9,14 @@ import string
 from thefuzz import fuzz
 import time
 
+# Загрузите ключ из переменной окружения
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
+if not SECRET_KEY:
+	raise ValueError("SECRET_KEY not specified in environment")
 #add EN_US, RU_UR, RU_UK, RU_BR
 
-bot = telebot.TeleBot("7287197741:AAFGAFALTEsdtyIJU5ik1rUrr8-Z8ouQpPE")
+bot = telebot.TeleBot(SECRET_KEY)
 
 chats = {}
 if not os.path.exists("chats/"):
