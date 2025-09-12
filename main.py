@@ -9,12 +9,11 @@ import string
 from thefuzz import fuzz
 import time
 
-# Загрузите ключ из переменной окружения
-SECRET_KEY = os.environ.get('SECRET_KEY')
+from dotenv import load_dotenv
+load_dotenv()
 
-if not SECRET_KEY:
-	raise ValueError("SECRET_KEY not specified in environment")
-#add EN_US, RU_UR, RU_UK, RU_BR
+SECRET_KEY = os.getenv("SECRET_KEY")
+# next to add: EN_US, RU_UR, RU_UK, RU_BR
 
 bot = telebot.TeleBot(SECRET_KEY)
 
@@ -195,4 +194,5 @@ def msg_hndr(msg):
 			return
 
 if __name__ == "__main__":
+
 	main()
