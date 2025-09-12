@@ -11,7 +11,7 @@ import time
 
 #add EN_US, RU_UR, RU_UK, RU_BR
 
-bot = telebot.TeleBot("7287197741:AAFGAFALTEsdtyIJU5ik1rUrr8-Z8ouQpPE")
+bot = telebot.TeleBot("SECRET_KEY")
 
 chats = {}
 if not os.path.exists("chats/"):
@@ -190,4 +190,5 @@ def msg_hndr(msg):
 			return
 
 if __name__ == "__main__":
+
 	main()
