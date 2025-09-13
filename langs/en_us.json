@@ -1,0 +1,16 @@
+{
+	"help_info": "Bot commands: \n/help - get a list of commands \n/word add/remove <word> - add a word/remove a word \n\t\t\t\t\t or list - get a list of words\n",
+	"no_perms": "You do not have permission to run this command.",
+	"arg_tip0": "Use add, remove or list.",
+	"arg_tip1": "/word add <word>",
+	"arg_tip2": "/word remove <word>",
+	"word_add": "Word %s successful added",
+	"word_remove": "Word %s successful removed",
+	"list_line": "List of forbidden words in this chat:",
+	"donate_msg": "You can support the author with money here:\nhttps://boosty.to/author_gmp14",
+	"delete_fail": "I can't delete a message, make sure the bot has the \"Delete messages\" right",
+	"lang_help": "/lang <support lang>\n/lang list - for list supported langs",
+	"lang_list_part": "List of supported languages:",
+	"lang_not_exists": "Lang %s not supported",
+	"lang_setted": "Lang %s successful setted"
+}

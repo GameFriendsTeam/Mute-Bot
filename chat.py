@@ -16,8 +16,7 @@ class Chat:
 	def _file_CAC(self):
 		if os.path.exists(self._file):
 			return
-		else:
-			open(self._file, 'w')
+		open(self._file, 'w')
 
 	def readFile(self):
 		lines = []
@@ -44,4 +43,3 @@ class Chat:
 		with open(self._file, 'w') as f:
 			for line in lines:
 				f.write(line+"\n")
-			
