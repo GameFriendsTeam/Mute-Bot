@@ -273,6 +273,12 @@ def lang_cmd(cmd):
 def msg_edit_hndr(msg):
 	msg_hndr(msg)
 
+@bot.message_handler(content_types=['sticker', 'animation', 'dice'])
+def es_handler(msg):
+	if msg.dice:
+		msg.text = msg.dice.emoji
+	msg_hndr(msg)
+
 @bot.message_handler(func=lambda message: True)
 def msg_hndr(msg):
 	#handle_message_spam(msg)
