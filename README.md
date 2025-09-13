@@ -6,8 +6,8 @@ Next steps:
     - [x] EN_US
     - [x] UA_UK
     - [x] BY_BE
-  - [ ] Add change message handler
-  - [ ] Add emoji handler
+  - [x] Add change message handler
+  - [x] Add emoji handler
 
 ## Installing libraries
 ```bash

@@ -269,7 +269,11 @@ def lang_cmd(cmd):
 	update_data(cmd.chat.id, "lang", args[0].lower())
 	bot.reply_to(cmd, get_chat_lang(cmd.chat.id).get("lang_setted").replace("%s", args[0]))
 
-@bot.message_handler(content_types=['text'])
+@bot.edited_message_handler(func=lambda message: True)
+def msg_edit_hndr(msg):
+	msg_hndr(msg)
+
+@bot.message_handler(func=lambda message: True)
 def msg_hndr(msg):
 	#handle_message_spam(msg)
 	chat = GorL_chat(msg.chat.id)
