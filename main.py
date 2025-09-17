@@ -6,6 +6,7 @@ import string
 from thefuzz import fuzz
 from chat import Chat
 from lang import Lang
+import requests
 import string
 import time
 import json
@@ -294,5 +295,13 @@ def msg_hndr(msg):
 				bot.reply_to(msg, get_chat_lang(msg.chat.id).get("delete_fail"))
 			return
 
-def main(): bot.polling(none_stop=True, interval=0)
-if __name__ == "__main__": main()
+def main():
+	while True:
+		try:
+			bot.polling(none_stop=True, interval=0)
+		except requests.exceptions.RequestException:
+			print("RequestException, bot has been reconnected")
+			continue
+
+if __name__ == "__main__":
+	main()
